@@ -18,9 +18,9 @@ export default function RootLayout({
 					<div
 						className={`flex h-12 w-full flex-row items-center justify-between rounded-3xl border border-gray-500 px-2.5`}
 					>
-						<h1 className="animate-bounce">i had sex last night 😎</h1>
+						<h1 className="animate-bounce">Hot Taker</h1>
 						<div className="flex flex-row items-center gap-2.5">
-							<h1 className="animate-ping">yo hellpo this is the account section</h1>
+							<h1 className="animate-ping">Login/Signup</h1>
 						</div>
 					</div>
 					<div className="flex h-full w-full flex-row justify-center gap-2.5">

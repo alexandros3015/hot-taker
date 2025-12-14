@@ -3,9 +3,9 @@ export default function Home() {
 		{
 			id: 0,
 			image:
-				'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScHmdKasyaT82YB_ueWmd4xsvmz_FKavosqg&s',
+				'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/WAB_BDhe_4-4_115_Kleine_Scheidegg_-_Wengernalp.jpg/500px-WAB_BDhe_4-4_115_Kleine_Scheidegg_-_Wengernalp.jpg',
 			author: 'sid',
-			text: 'Hear me out shes breedable!!!!',
+			text: 'Trains are cool',
 			agree: 999,
 			disagree: 0,
 			spice_level: 0.5
@@ -15,11 +15,21 @@ export default function Home() {
 	return (
 		<ul>
 			{hotTakes.map((value, index) => (
-				<li className="bg-foreground flex h-64 w-full flex-col rounded-3xl p-2.5" key={value.id}>
-					<img width={'100%'} src={value.image} alt={value.author} />
-					<p>
-						{value.author}, {value.text}, {value.spice_level}, {value.agree}, {value.disagree}
-					</p>
+				<li className="bg-foreground flex w-full flex-col rounded-3xl p-2.5 shadow-lg space-y-4" key={value.id}>
+					<div className="flex gap-4">  					
+              <img src={value.image} alt="image" className="w-2/5 object-cover mb-4 rounded-lg" />
+              
+              <div className="space-y-1 text-sm flex flex-col justify-center">
+                <div><strong>Author: </strong>{value.author}</div>
+                <div><strong>Spice Level: </strong>{value.spice_level}</div>
+                <div><strong>Agrees: </strong>{value.agree}</div>
+                <div><strong>Disagrees: </strong>{value.disagree}</div>
+              </div>
+  					</div>
+  					
+  					<div className="p-4 bg-gray-700 rounded-lg">
+              <p>{value.text}</p>
+  					</div>
 				</li>
 			))}
 		</ul>
