@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hot Taker
 
-## Getting Started
+## What is Hot Taker?
 
-First, run the development server:
+Hot Taker is a web application that allows users to share hot-takes on various topics. Users can rate the hot take based on the spice level, and agree or disagree with the hot take.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## How to download and run?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To download and run the application, follow these steps:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository to your local machine.
+2. Install the required dependencies by running `npm install` in the project directory.
+3. Start the development server by running `npm run dev` in the project directory.
+4. Open your web browser and navigate to `http://localhost:3000` to access the application.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+If you do not have Node.js installed, you can download it from the [official website.](https://nodejs.org/en/download/)
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- Users can create hot takes and rate them based on the spice level (TO BE IMPLEMENTED).
+- Users can view the hot takes and rate them.
+- Users can search for hot takes based on keywords (TO BE IMPLEMENTED).
+- Users cam filter hot takes (TO BE IMPLEMENTED).
+- Users can add and search for communities to share hot takes with (TO BE IMPLEMENTED).
+(If you haven't noticed, basically nothing has been added in yet)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome! If you find a bug or have a suggestion, please open an issue or submit a pull request.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Acknowledgments
+
+- The icons used in this project are from the [Lucide](https://lucide.dev/) icon library.
+- The design of the application is based off of the [NshIS style](https://nshis.com/other/style.css).
