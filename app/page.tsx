@@ -1,4 +1,5 @@
 import { Flame, Book, ThumbsDown, ThumbsUp } from 'lucide-react';
+import Image from  'next/image';
 
 export default function Home() {
 	const hotTakes = [
@@ -18,9 +19,10 @@ export default function Home() {
 		<ul>
 			{hotTakes.map((value, index) => (
 				<li className="bg-foreground flex w-full flex-col rounded-3xl p-2.5 shadow-lg space-y-4" key={value.id}>
-					<div className="flex gap-4">  					
-              <img src={value.image} alt="image" className="w-2/5 object-cover mb-4 rounded-lg" />
-              
+					<div className="flex gap-4">
+					  <div className='relative mb-4 overflow-hidden rounded-lg w-2/5'>
+              <Image src={value.image} alt="image" width={800} height={600} sizes='(max-width: 768px) 100vw, 40vw' quality={90} />
+						</div>
               <div className="space-y-1 text-sm flex flex-col justify-center">
                 <div className="flex items-center gap-1"><Book size={18} /><strong>Author: </strong>{value.author}</div>
                 <div className="flex items-center gap-1"><Flame size={18} /><strong>Spice Level: </strong>{value.spice_level}</div>
