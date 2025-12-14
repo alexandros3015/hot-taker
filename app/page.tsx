@@ -1,3 +1,5 @@
+import { Flame, Book, ThumbsDown, ThumbsUp } from 'lucide-react';
+
 export default function Home() {
 	const hotTakes = [
 		{
@@ -20,10 +22,10 @@ export default function Home() {
               <img src={value.image} alt="image" className="w-2/5 object-cover mb-4 rounded-lg" />
               
               <div className="space-y-1 text-sm flex flex-col justify-center">
-                <div><strong>Author: </strong>{value.author}</div>
-                <div><strong>Spice Level: </strong>{value.spice_level}</div>
-                <div><strong>Agrees: </strong>{value.agree}</div>
-                <div><strong>Disagrees: </strong>{value.disagree}</div>
+                <div className="flex items-center gap-1"><Book size={18} /><strong>Author: </strong>{value.author}</div>
+                <div className="flex items-center gap-1"><Flame size={18} /><strong>Spice Level: </strong>{value.spice_level}</div>
+                <div className="flex items-center gap-1"><ThumbsUp size={18} /><strong>Agrees: </strong>{value.agree}</div>
+                <div className="flex items-center gap-1"><ThumbsDown size={18} /><strong>Disagrees: </strong>{value.disagree}</div>
               </div>
   					</div>
   					
