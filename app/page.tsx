@@ -6,7 +6,7 @@ function TakeImage({ src }: { src?: string }) {
 	// TODO: Make the formatting work better. Do som experimenting and figure out what works best. PLEASE
 	else if (src !== '') {
 		return (
-			<div className="relative mb-4 h-30 w-2/5 overflow-hidden rounded-lg">
+			<div className="relative mb-4 h-35 w-2/5 overflow-hidden rounded-lg">
 				<Image
 					src={src}
 					alt="image"
@@ -24,6 +24,7 @@ export default function Home() {
 	const hotTakes = [
 		{
 			id: 0,
+			title: 'Trains',
 			image:
 				'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/WAB_BDhe_4-4_115_Kleine_Scheidegg_-_Wengernalp.jpg/500px-WAB_BDhe_4-4_115_Kleine_Scheidegg_-_Wengernalp.jpg',
 			author: 'sid',
@@ -34,12 +35,23 @@ export default function Home() {
 		},
 		{
 			id: 1,
+			title: 'Math',
 			image: '',
 			author: 'Sparsha',
 			text: '1+1=2',
 			agree: 5,
 			disagree: 2,
 			spice_level: 0.75
+		},
+		{
+			id: 2,
+			title: 'Photography',
+			image: 'https://assets.bucketlistly.blog/sites/5adf778b6eabcc00190b75b1/content_entry5adf77af6eabcc00190b75b6/6075185986d092000b192d0a/files/best-free-travel-images-main-image-hd-op.webp',
+			author: 'Alex',
+			text: 'This person is cool!',
+			agree: 10,
+			disagree: 0,
+      spice_level: 0,
 		}
 	];
 
@@ -50,6 +62,9 @@ export default function Home() {
 					className="bg-foreground mb-4 flex w-full flex-col space-y-4 rounded-3xl p-2.5 shadow-lg"
 					key={value.id}
 				>
+				  <div>
+						<h2 className="text-xl font-bold">{value.title}</h2>
+					</div>
 					<div className="flex gap-4">
 						<TakeImage src={value.image} />
 						<div className="flex flex-col justify-center space-y-1 text-sm">
