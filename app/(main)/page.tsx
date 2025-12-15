@@ -6,7 +6,7 @@ function TakeImage({ src }: { src?: string }) {
 	// TODO: Make the formatting work better. Do som experimenting and figure out what works best. PLEASE
 	else if (src !== '') {
 		return (
-			<div className="relative mb-4 h-35 w-2/5 overflow-hidden rounded-lg">
+			<div className="relative mb-4 h-36 w-1/2 overflow-hidden rounded-lg">
 				<Image
 					src={src}
 					alt="image"
@@ -52,7 +52,17 @@ export default function Home() {
 			agree: 10,
 			disagree: 0,
       spice_level: 0,
-		}
+		},
+		{
+			id: 3,
+			title: 'Someone',
+			image: '',
+			author: 'EJ',
+			text: '[CENSORED] is an unkind person and we shouldn\'t add him to goofsaken',
+			agree: 30,
+			disagree: 10,
+			spice_level: 1,
+		},
 	];
 
 	return (
@@ -62,8 +72,8 @@ export default function Home() {
 					className="bg-foreground mb-4 flex w-full flex-col space-y-4 rounded-3xl p-2.5 shadow-lg"
 					key={value.id}
 				>
-				  <div>
-						<h2 className="text-xl font-bold">{value.title}</h2>
+				  <div className="text-xl font-bold">
+						{value.title}
 					</div>
 					<div className="flex gap-4">
 						<TakeImage src={value.image} />
